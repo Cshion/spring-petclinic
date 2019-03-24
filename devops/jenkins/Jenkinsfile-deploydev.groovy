@@ -1,2 +1,2 @@
-@Library('somelib')
+@Library('devopslib')
 import org.cshion.Utils;
