@@ -8,12 +8,8 @@ node{
         checkout scm
     }
 
-    stage("Build"){
+    stage("Build & Test"){
         devopsUtils.buildMaven();
-    }
-
-    stage("Test"){
-
     }
 
     stage("QA Analysis"){
@@ -28,7 +24,7 @@ node{
 
     }
 
-    stage("Deploy to Dev Env"){
+    stage("Deploy to Dev"){
 
-    }
+    }           
 }
