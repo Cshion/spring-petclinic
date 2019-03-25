@@ -9,7 +9,7 @@ node{
     }
 
     stage("Build"){
-        utils.buildMaven();
+        devopsUtils.buildMaven();
     }
 
     stage("Test"){
