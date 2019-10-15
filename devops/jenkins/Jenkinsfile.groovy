@@ -9,23 +9,23 @@ node{
     }
 
     stage("Build"){
-        microServiceJavaUtils.buildMavenProject();
+        sh "./mvnw test-compile"
     }
 
     stage("Unit Testing"){
-        microServiceJavaUtils.runMavenUnitTest();
+        sh "./mvnw test"
     }
 
     stage("QA Analysis"){
-        microServiceJavaUtils.uploadArtifact();
+        
     }
 
     stage("Upload Artifact"){
-        microServiceJavaUtils.runStaticAnalysis();
+        
     }
 
     stage("Deploy to DEV"){
-        microServiceJavaUtils.deployToAks();
+       
     }  
 
 }
