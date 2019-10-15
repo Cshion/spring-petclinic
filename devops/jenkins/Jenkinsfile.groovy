@@ -1,4 +1,4 @@
-@Library('devopslib')
+@Library('devopslib@step-1')
 import org.cshion.MicroserviceJavaUtils;
 
 def microServiceJavaUtils = new MicroserviceJavaUtils(this);
