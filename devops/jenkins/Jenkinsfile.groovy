@@ -1,7 +1,7 @@
 @Library('devopslib')
-import org.cshion.Utils;
+import org.cshion.MicroserviceJavaUtils;
 
-def devopsUtils = new Utils(this);
+def microServiceJavaUtils = new MicroserviceJavaUtils(this);
 
 node{
     stage("Configuration"){
@@ -9,14 +9,14 @@ node{
     }
 
     stage("Build & Test"){
-        devopsUtils.buildMaven();
+        microServiceJavaUtils.buildMaven();
     }
 
     stage("QA Analysis"){
 
     }
 
-    stage("Security Analysis"){
+    stage("Deploy to DEV"){
 
     }
 
@@ -24,7 +24,23 @@ node{
 
     }
 
-    stage("Deploy to Dev"){
+    stage("Deploy to QA"){
+
+    }
+
+    stage("Functional Tests"){
+
+    }
+
+    stage("Non Functional Tests"){
+
+    }
+
+    stage("Promove Artifact"){
+
+    }
+
+    stage("Deploy to PROD"){
 
     }           
 }
