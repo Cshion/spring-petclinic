@@ -8,39 +8,24 @@ node{
         checkout scm
     }
 
-    stage("Build & Test"){
+    stage("Build"){
         microServiceJavaUtils.buildMavenProject();
     }
 
-    stage("QA Analysis"){
-
+    stage("Unit Testing"){
+        microServiceJavaUtils.runMavenUnitTest();
     }
 
-    stage("Deploy to DEV"){
-
+    stage("QA Analysis"){
+        microServiceJavaUtils.uploadArtifact();
     }
 
     stage("Upload Artifact"){
-
+        microServiceJavaUtils.runStaticAnalysis();
     }
 
-    stage("Deploy to QA"){
+    stage("Deploy to DEV"){
+        microServiceJavaUtils.deployToAks();
+    }  
 
-    }
-
-    stage("Functional Tests"){
-
-    }
-
-    stage("Non Functional Tests"){
-
-    }
-
-    stage("Promove Artifact"){
-
-    }
-
-    stage("Deploy to PROD"){
-
-    }           
 }
