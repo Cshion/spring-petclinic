@@ -9,7 +9,7 @@ node{
     }
 
     stage("Build & Test"){
-        microServiceJavaUtils.buildMaven();
+        microServiceJavaUtils.buildMavenProject();
     }
 
     stage("QA Analysis"){
