@@ -4,7 +4,7 @@ import org.cshion.MicroserviceJavaUtils;
 def microServiceJavaUtils = new MicroserviceJavaUtils(this);
 
 node{
-    stage("Configuration"){
+    stage("Preparation"){
         checkout scm
     }
 
